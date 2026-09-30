@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<Extern href="stdidcmd.h" />
+	<Extern href="vsshlids.h" />
+	<Include href="KnownImageIds.vsct" />
+	<Include href="VSGlobals.vsct" />
+
+	<Commands package="MroczwareTools">
+		<Bitmaps>
+			<Bitmap guid="MroczwareIcon" href="Resources\Mroczware.png" usedList="MroczwareLogo" />
+		</Bitmaps>
+		<Menus>
+
+			<!-- Main Menu -->
+			<Menu guid="MroczwareTools" id="MroczwareMenuGroup" priority="0x0100" type="Menu">
+				<Parent guid="guidSHLMainMenu" id="IDG_VS_MM_TOOLSADDINS" />
+				<Strings>
+					<ButtonText>Mroczware</ButtonText>
+				</Strings>
+			</Menu>
+			<!-- Main Menu -->
+
+			<!-- Quick Actions Menu -->
+			<Menu guid="MroczwareTools" id="MroczwareActionsMenu" priority="0x0100" type="Menu">
+				<Parent guid="MroczwareTools" id="MroczwareActionsMenuGroup" />
+				<Strings>
+					<ButtonText>Mroczware Quick Actions</ButtonText>
+				</Strings>
+			</Menu>
+			<!-- Quick Actions Menu -->
+
+		</Menus>
+		<Groups>
+
+			<!-- Main Menu Group -->
+			<Group guid="MroczwareTools" id="MroczwareMenuGroup" priority="0x0300">
+				<Parent guid="MroczwareTools" id="MroczwareMenuGroup" />
+			</Group>
+			<!-- Main Menu Group -->
+
+			<!-- Quick Actions Group -->
+			<Group guid="MroczwareTools" id="MroczwareActionsMenuGroup" priority="0x0100">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
+			</Group>
+			<Group guid="MroczwareTools" id="MroczwareActionsButtonsGroup" priority="0x0200">
+				<Parent guid="MroczwareTools" id="MroczwareActionsMenu" />
+			</Group>
+			<!-- Quick Actions Group -->
+
+			<!-- Build Group -->
+			<Group guid="MroczwareTools" id="MroczwareBuildGroup" priority="0x0200">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_BUILD" />
+			</Group>
+			<!-- Build Group -->
+
+			<!-- Build Group -->
+			<Group guid="MroczwareTools" id="MroczwareSolutionExplorerGroup" priority="0x0300">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE" />
+			</Group>
+
+			<Group guid="MroczwareTools" id="MroczwareFolderGroup" priority="0x0100">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_FOLDERNODE" />
+			</Group>
+			<!-- Build Group -->
+
+		</Groups>
+		<Buttons>
+
+			<!-- Quick Actions Button -->
+			<Button guid="MroczwareTools" id="GenerateDto" priority="0x0100" type="Button">
+				<Parent guid="MroczwareTools" id="MroczwareActionsButtonsGroup" />
+				<!--<Icon guid="MroczwareIcon" id="MroczwareLogo" />-->
+				<Strings>
+					<ButtonText>Wygeneruj DTO/Model</ButtonText>
+					<LocCanonicalName>.MroczwareTools.GenerateDto</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="MroczwareTools" id="GenerateIntegrationTest" priority="0x0300" type="Button">
+				<Parent guid="MroczwareTools" id="MroczwareActionsButtonsGroup" />
+				<!--<Icon guid="MroczwareIcon" id="MroczwareLogo" />-->
+				<Strings>
+					<ButtonText>Generuj test integracyjny</ButtonText>
+					<LocCanonicalName>.MroczwareTools.GenerateIntegrationTest</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="MroczwareTools" id="GenerateRepoFromSql" priority="0x0400" type="Button">
+				<Parent guid="MroczwareTools" id="MroczwareActionsButtonsGroup" />
+				<!--<Icon guid="MroczwareIcon" id="MroczwareLogo" />-->
+				<Strings>
+					<ButtonText>Wygeneruj na podstawie SQL</ButtonText>
+					<LocCanonicalName>.MroczwareTools.GenerateRepoFromSql</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="MroczwareTools" id="GenerateEmptyService" priority="0x0710" type="Button">
+				<Parent guid="MroczwareTools" id="MroczwareSolutionExplorerGroup" />
+				<!--<Icon guid="MroczwareIcon" id="MroczwareLogo" />-->
+				<Strings>
+					<ButtonText>Dodaj pusty serwis</ButtonText>
+					<LocCanonicalName>.MroczwareTools.GenerateEmptyService</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="MroczwareTools" id="GenerateEmptyRepository" priority="0x0720" type="Button">
+				<Parent guid="MroczwareTools" id="MroczwareSolutionExplorerGroup" />
+				<!--<Icon guid="MroczwareIcon" id="MroczwareLogo" />-->
+				<Strings>
+					<ButtonText>Dodaj puste repozytorium</ButtonText>
+					<LocCanonicalName>.MroczwareTools.GenerateEmptyRepository</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="MroczwareTools" id="GenerateSql" priority="0x0730" type="Button">
+				<Parent guid="MroczwareTools" id="MroczwareSolutionExplorerGroup" />
+				<!--<Icon guid="MroczwareIcon" id="MroczwareLogo" />-->
+				<Strings>
+					<ButtonText>Wygeneruj SQL</ButtonText>
+					<LocCanonicalName>.MroczwareTools.GenerateSql</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="MroczwareTools" id="GenerateResponseFromSql" priority="0x0730" type="Button">
+				<Parent guid="MroczwareTools" id="MroczwareFolderGroup" />
+				<!--<Icon guid="MroczwareIcon" id="MroczwareLogo" />-->
+				<Strings>
+					<ButtonText>Wygeneruj odpowiedź z SQL</ButtonText>
+					<LocCanonicalName>.MroczwareTools.GenerateResponseFromSql</LocCanonicalName>
+				</Strings>
+			</Button>
+			<!-- Quick Actions Button -->
+
+			<!-- Build Button -->
+			<Button guid="MroczwareTools" id="ResetIis" priority="0x0100" type="Button">
+				<Parent guid="MroczwareTools" id="MroczwareBuildGroup" />
+				<!--<Icon guid="MroczwareIcon" id="MroczwareLogo" />-->
+				<Strings>
+					<ButtonText>ResetIIS</ButtonText>
+					<LocCanonicalName>.MroczwareTools.ResetIis</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="MroczwareTools" id="ViewLogs" priority="0x0110" type="Button">
+				<Parent guid="MroczwareTools" id="MroczwareBuildGroup" />
+				<!--<Icon guid="MroczwareIcon" id="MroczwareLogo" />-->
+				<Strings>
+					<ButtonText>View Logs</ButtonText>
+					<LocCanonicalName>.MroczwareTools.ViewLogs</LocCanonicalName>
+				</Strings>
+			</Button>
+			<!-- Build Button -->
+
+		</Buttons>
+	</Commands>
+	<Symbols>
+		<GuidSymbol name="MroczwareTools" value="{a2dc08fc-cb51-4688-b35d-be4130e7969c}">
+
+			<!-- Main menu Symbols -->
+			<IDSymbol name="MroczwareMenuGroup" value="0x0001" />
+			<!-- Main menu Symbols -->
+
+			<!-- Quick Actions Symbols -->
+			<IDSymbol name="MroczwareActionsMenuGroup" value="0x0400" />
+			<IDSymbol name="MroczwareActionsMenu" value="0x0500" />
+			<IDSymbol name="MroczwareActionsButtonsGroup" value="0x0700" />
+			<IDSymbol name="GenerateDto" value="0x0410" />
+			<IDSymbol name="GenerateParams" value="0x0430" />
+			<IDSymbol name="GenerateRepoFromSql" value="0x0440" />
+			<IDSymbol name="GenerateSql" value="0x0450" />
+			<IDSymbol name="GenerateEmptyService" value="0x0470" />
+			<IDSymbol name="GenerateEmptyRepository" value="0x0480" />
+			<IDSymbol name="GenerateResponseFromSql" value="0x0490" />
+			<IDSymbol name="GenerateIntegrationTest" value="0x0510" />
+			<!-- Quick Actions Symbols -->
+
+			<!-- Build Symbols -->
+			<IDSymbol name="MroczwareBuildGroup" value="0x0600" />
+			<IDSymbol name="ResetIis" value="0x0610" />
+			<IDSymbol name="ViewLogs" value="0x0620" />
+			<!-- Build Symbols -->
+
+			<!-- Solution Explorer -->
+			<IDSymbol name="MroczwareSolutionExplorerGroup" value="0x0800" />
+			<IDSymbol name="MroczwareFolderGroup" value="0x0900" />
+			<!-- Build Symbols -->
+
+		</GuidSymbol>
+		<GuidSymbol name="MroczwareIcon" value="{11E1E337-6574-47BD-B71F-347631E2B76C}">
+			<IDSymbol name="MroczwareLogo" value="1" />
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>

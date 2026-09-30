@@ -1,0 +1,15 @@
+
+# --- local config / secrets (do not commit) ---
+appsettings.json
+appsettings.*.json
+local.settings.json
+.env
+.env.*
+*.pfx
+*.pem
+*.key
+*.user
+*.pubxml
+*.log
+**/Files/*
+!**/Files/.gitkeep

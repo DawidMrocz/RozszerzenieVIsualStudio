@@ -1,0 +1,59 @@
+﻿<Window x:Class="UI.View.SelectConnectionStringWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Wybierz tabelę"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        Width="800" Height="155"
+        BorderBrush="#403582" 
+        HorizontalAlignment="Center"
+        BorderThickness="0.5"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Styles/DarkButton.xaml"/>
+                <ResourceDictionary Source="../Styles/DarkTextBox.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="ComboBox">
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+        </ResourceDictionary>
+
+    </Window.Resources>
+
+    <!-- Główne tło w ciemnym stylu -->
+    <Grid Background="#252526">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border BorderBrush="#3C3C3C" Background="Transparent" Grid.Row="0">
+            <StackPanel Background="Transparent">
+
+                <TextBlock Text="Nie udało się wywnioskować Connection String'a" Margin="5,5,0,10" FontSize="16" Foreground="White" HorizontalAlignment="Center"/>
+
+                <TextBlock Text="Ustaw connection string (jeżeli nie widzisz żadnej pozycji dodaj plik z ConnectionString do solucji)." Margin="5,5,0,0" FontSize="12" Foreground="Wheat" HorizontalAlignment="Center"/>
+                <Separator Background="#403582" Height="1" Width="170"/>
+
+                <ComboBox Width="auto" Margin="10,5"
+                     ItemsSource="{Binding ConnectionStringKeys}"
+                     SelectedItem="{Binding ConnectionStringText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+        </Border>
+
+        <!-- 🔹 Przyciski na samym dole -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Button Content="Anuluj" Style="{StaticResource DarkBasicButton}" Margin="10" Click="CloseWindow"/>
+            <Button Content="Dalej" Style="{StaticResource DarkVioletButton}" Margin="10" Click="SaveSettings"/>
+        </StackPanel>
+
+    </Grid>
+
+</Window>
+

@@ -1,0 +1,113 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Moje dokumenty\\_publish\\MroczwareTools\\MroczwareTools.csproj": {}
+  },
+  "projects": {
+    "E:\\Moje dokumenty\\_publish\\MroczwareTools\\MroczwareTools.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Moje dokumenty\\_publish\\MroczwareTools\\MroczwareTools.csproj",
+        "projectName": "MroczwareTools",
+        "projectPath": "E:\\Moje dokumenty\\_publish\\MroczwareTools\\MroczwareTools.csproj",
+        "packagesPath": "C:\\Users\\dawid.mroczkowski\\.nuget\\packages\\",
+        "outputPath": "E:\\Moje dokumenty\\_publish\\MroczwareTools\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "UsingMicrosoftNETSdk": false,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dawid.mroczkowski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/CIRFMF/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "AvalonEdit": {
+              "target": "Package",
+              "version": "[6.3.1.120, )"
+            },
+            "Community.VisualStudio.Toolkit.17": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[17.0.451, )"
+            },
+            "Community.VisualStudio.VSCT": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[16.0.29.6, )"
+            },
+            "Microsoft.Build.Locator": {
+              "target": "Package",
+              "version": "[1.9.1, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "Microsoft.CodeAnalysis.Workspaces.MSBuild": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "Microsoft.SqlServer.TransactSql.ScriptDom": {
+              "target": "Package",
+              "version": "[170.28.0, )"
+            },
+            "Microsoft.VSSDK.BuildTools": {
+              "target": "Package",
+              "version": "[17.0.5232, )"
+            },
+            "Microsoft.VisualStudio.LanguageServices": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "Microsoft.VisualStudio.TextManager.Interop": {
+              "target": "Package",
+              "version": "[17.0.31902.203, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
